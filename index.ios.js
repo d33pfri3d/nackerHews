@@ -15,7 +15,7 @@ var nackerHews = React.createClass({
     return (
       <NavigatorIOS
       style={styles.container}
-      tintColor='#FF6600'
+      tintColor='#F39C12'
       initialRoute={{
         title:'Hacker News',
         component: HNView

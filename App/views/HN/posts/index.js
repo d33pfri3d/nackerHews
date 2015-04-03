@@ -5,7 +5,8 @@ var React = require('react-native');
 var {
 	Text,
 	View,
-	ListView
+	ListView,
+	TouchableHighlight
 } = React;
 
 var styles = require('./style');
@@ -63,8 +64,23 @@ var ViewReactClass = React.createClass({
 		);
 	},
 	renderListView: function(){
-		
-	}
+		return(
+			<ListView
+			dataSource={this.state.dataSource}
+			renderRow={this.renderPostCell}
+			style={styles.postsListView}/>
+		)
+	},
+	renderPostCell: function(post){
+		return(
+			<TouchableHighlight onPress={() => this._onPress(post)}>
+        <View style={styles.cell}>
+          <Text style={styles.title}>{post.title}</Text>
+          <Text style={styles.url}>{post.url}</Text>
+        </View>
+      </TouchableHighlight>
+		);
+	},
 
 })
 
