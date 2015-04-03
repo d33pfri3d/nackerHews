@@ -35,7 +35,7 @@ var ViewReactClass = React.createClass({
         	})
         	.then((ids) => {
 				var promises = ids.map(function(id){
-				return fetch("https://hacker-news.firebaseio.com/v0/item/"+id+".json?")
+				return fetch(api.HN_ITEM + id + ".json?")
 				.then((response) => response.json())
 			});
 				return Promise.all(promises);
@@ -54,7 +54,7 @@ var ViewReactClass = React.createClass({
 			return(
 			<View style={styles.container}>
 			<Text style={styles.loadingText}>
-			Fetching Posts...
+				Loading Posts
 			</Text>
 			</View>
 			)
@@ -73,12 +73,12 @@ var ViewReactClass = React.createClass({
 	},
 	renderPostCell: function(post){
 		return(
-			<TouchableHighlight onPress={() => this._onPress(post)}>
-        <View style={styles.cell}>
-          <Text style={styles.title}>{post.title}</Text>
-          <Text style={styles.url}>{post.url}</Text>
-        </View>
-      </TouchableHighlight>
+		<TouchableHighlight onPress={() => this._onPress(post)}>
+	        <View style={styles.cell}>
+	          <Text style={styles.title}>{post.title}</Text>
+	          <Text style={styles.url}>{post.url}</Text>
+	        </View>
+	      </TouchableHighlight>
 		);
 	},
 

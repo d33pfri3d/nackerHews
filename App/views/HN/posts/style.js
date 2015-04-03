@@ -8,60 +8,40 @@ var {
 
 module.exports = StyleSheet.create({
   container: {
-    flex:1,
-    backgroundColor: '#F6F6EF',
-    flexDirection: 'column',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
-  head: {
-    marginLeft:10,
-    marginRight:10,
-    marginBottom:5,
-  },
-  foot: {
-    flex:2
-  },
-  title:{
+  welcome: {
     fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+  },
+  listView: {
+  },
+  cell: {
     textAlign: 'left',
-    marginTop: 10,
-    marginBottom: 10,
-    color: '#FF6600',
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingLeft: 5,
+    backgroundColor: '#F5FCFF',
+    fontSize: 20
+
   },
-  text:{
-    fontSize: 14,
-    marginBottom: 3,
-},
-  source:{
-    fontSize: 15,
-    textAlign: 'left',
-    color: '#0089FF',
+  title: {
+    fontWeight: 'bold',
   },
-  separator: {
-    height: 0.5,
-    backgroundColor: '#CCCCCC',
+  url: {
+    fontSize: 10,
+    color: "#444444",
+    paddingLeft: 5,
   },
-  loadingText:{
-    color: '#FF6600',
-    marginTop: 5,
-    fontSize: 15,
-  },
-  commentTitle: {
-    marginTop: 10,
-    color: 'gray',
-  },
-  commentsLoading: {
-    marginLeft: 10,
-    color: '#FF6600',
-  },
-  commentListView:{
-    color: '#000000',
-    margin: 0,
-    padding: 0,
-    backgroundColor: '#F6F6EF',
-  },
-  postDetailsLine: {
-    fontSize: 12,
-    marginBottom: 10,
-    color: 'gray',
-  },
+  navigator: {
+    flex: 1
+  }
 });
