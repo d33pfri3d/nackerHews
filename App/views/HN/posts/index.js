@@ -11,6 +11,7 @@ var {
 
 var styles = require('./style');
 var api = require('./../../../api.js');
+var PostCell = require('./cell');
 
 var ViewReactClass = React.createClass({
 
@@ -73,12 +74,7 @@ var ViewReactClass = React.createClass({
 	},
 	renderPostCell: function(post){
 		return(
-		<TouchableHighlight onPress={() => this._onPress(post)}>
-	        <View style={styles.cell}>
-	          <Text style={styles.title}>{post.title}</Text>
-	          <Text style={styles.url}>{post.url}</Text>
-	        </View>
-	      </TouchableHighlight>
+			<PostCell post={post}/>
 		);
 	},
 
