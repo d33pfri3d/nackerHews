@@ -6,7 +6,8 @@ var {
 	Text,
 	View,
 	ListView,
-	TouchableHighlight
+	TouchableHighlight,
+	ActivityIndicatorIOS
 } = React;
 
 var styles = require('./style');
@@ -54,9 +55,8 @@ var ViewReactClass = React.createClass({
 		if(!this.state.loaded){
 			return(
 			<View style={styles.container}>
-			<Text style={styles.loadingText}>
-				Loading Posts
-			</Text>
+				<Text>Loading Posts</Text>
+				<ActivityIndicatorIOS size="large" color="#FF6500" />
 			</View>
 			)
 		}
